@@ -1,0 +1,30 @@
+# .rubocop.yml 파일 내용
+
+AllCops:
+  NewCops: enable   # 최신 규칙들 활성화 (경고 방지)
+  Exclude:
+    - 'vendor/**/*' # 외부 라이브러리는 검사 제외
+
+# 큰따옴표 허용
+Style/StringLiterals:
+  Enabled: false
+
+# 한 줄 길이를 조금 더 넉넉하게 (기본 80자는 너무 짧음)
+Layout/LineLength:
+  Max: 120
+
+# 클래스 상단에 주석 안 달아도 됨 (Frozen_string_literal 등)
+Style/Documentation:
+  Enabled: false
+
+# 한글 주석 쓸 때 발생하는 에러 방지
+Style/AsciiComments:
+  Enabled: false
+
+# 2. Frozen String Literal 주석 무시 (경고 삭제)
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# 3. 클래스 설명 주석 무시 (추가로 해두면 좋음)
+Style/Documentation:
+  Enabled: false
