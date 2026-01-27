@@ -24,7 +24,12 @@ puts "오른쪽 공백 제거: '#{spaced_str.rstrip}'" # 오른쪽 공백 제거
 
 # 5. 문자열 치환 (Replace)
 # gsub는 전역 치환 (Global Substitution)
-puts "치환: #{str.gsub('Ruby', 'Python')}"
+puts "치환: #{str.gsub('Ruby', 'Python')}" # Hello, Python World!
+
+# sub는 첫 번째 발생만 치환
+puts "치환: #{str.sub('Ruby', 'Python')}" # Hello, Python World!
+
+
 
 # 6. 문자열 분리 및 결합
 csv = "apple,banana,cherry"
