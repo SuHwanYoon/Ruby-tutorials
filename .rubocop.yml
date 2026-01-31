@@ -28,3 +28,10 @@ Style/FrozenStringLiteralComment:
 # 3. 클래스 설명 주석 무시 (추가로 해두면 좋음)
 Style/Documentation:
   Enabled: false
+# 4. 라인 끝 공백 무시 (불필요한 경고 방지)
+Layout/TrailingWhitespace:
+  Enabled: false
+
+# 5. 빈 줄 관련 경고 무시
+Layout/EmptyLines:
+  Enabled: false
