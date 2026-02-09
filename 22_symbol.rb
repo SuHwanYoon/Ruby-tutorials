@@ -9,6 +9,7 @@ symbols are like strings, except they are code
 # 1. 심볼 생성
 s1 = :ruby
 s2 = :ruby
+# 문자열 생성
 str1 = "ruby"
 str2 = "ruby"
 
