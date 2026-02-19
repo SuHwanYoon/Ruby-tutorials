@@ -2,10 +2,11 @@
 =begin
  Predicate => ? , means question, should return true or false
  Bang => !, means that this method with modify the object
+ ruby에서는 ? ! 는 커스텀 메서드, 내장메서드등 메서드에서만 사용하는 것
 =end
 
 # 1. Predicate Methods (?)
-# 메서드 이름 끝에 ?가 붙으며, 항상 true 또는 false를 반환하는 관습이 있습니다.
+# [메서드 이름 끝에] ?가 붙으며, 항상 true 또는 false를 반환하는 관습이 있습니다.
 
 def adult?(age)
   age >= 20
@@ -30,13 +31,13 @@ puts "원본 확인: #{name}" # 원보은 여전히 "yoon" 으로 변하지 않�
 
 # Bang이 있는 경우: 원본 객체 자체가 수정됨
 name.upcase!
-puts "upcase! 실행 후 원본: #{name}" # 원보 자체가 "YOON" 으로 변경됨
+puts "upcase! 실행 후 원본: #{name}" # 원본 자체가 "YOON" 으로 변경됨
 
 # 커스텀 Bang 메서드 예시
 def celebrate!(user)
   user[:status] = "Happy" # 원본 해시 수정
 end
-
+# my_user Hash객체(key-> Symbol, value -> String)
 my_user = { name: "Yoon", status: "Normal" }
 celebrate!(my_user)
 puts "Bang 메서드 후 상태: #{my_user[:status]}" # Happy
